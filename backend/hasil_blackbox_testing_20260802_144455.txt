@@ -1,0 +1,70 @@
+======================================================================
+  LAPORAN HASIL BLACKBOX TESTING — SISTEM FIT MEAL
+======================================================================
+
+  Waktu      : 2026-08-02 14:44:55
+  Server     : http://127.0.0.1:9090
+  Total Test : 49
+  Pass       : 49
+  Fail       : 0
+  Skip       : 0
+  Pass Rate  : 100.0%
+
+======================================================================
+  DETAIL SETIAP TEST CASE
+======================================================================
+
+No     ID       Kategori       Status   Deskripsi
+----------------------------------------------------------------------
+1      TC-01    Root           PASS     Root endpoint merespons HTTP 200
+2      TC-02    Root           PASS     Response body memiliki field 'message'
+3      TC-03    Root           PASS     Content-Type adalah application/json
+4      TC-04    Search         PASS     Pencarian 'nasi' mengembalikan hasil
+5      TC-05    Search         PASS     Pencarian 'ayam' mengembalikan hasil
+6      TC-06    Search         PASS     Pencarian 'tempe' mengembalikan hasil
+7      TC-07    Search         PASS     Query kosong ('') mengembalikan array kosong
+8      TC-08    Search         PASS     Tanpa parameter 'q' mengembalikan array kosong
+9      TC-09    Search         PASS     Kata kunci random (tidak ada) mengembalikan array kosong
+10     TC-10    Search         PASS     Response memiliki field wajib (status, results, has_next)
+11     TC-11    Search         PASS     Item search punya field nutrisi lengkap
+12     TC-12    Search         PASS     Hasil search tidak mengandung junk food (blacklist)
+13     TC-13    Search         PASS     Pagination page=0 merespons normal
+14     TC-14    Search         PASS     Pagination page=-1 ditolak (422 Validation Error)
+15     TC-15    Search         PASS     Limit=100 ditolak (melebihi max 50)
+16     TC-16    Search         PASS     Limit=0 mengembalikan array kosong
+17     TC-17    Search         PASS     Hasil pertama 'nasi putih' relevan dengan query
+18     TC-18    Search         PASS     SQL Injection attempt ditangani aman (tidak crash)
+19     TC-19    Search         PASS     Query dengan emoji tidak menyebabkan error
+20     TC-20    Search         PASS     Query sangat panjang (1000 char) tidak crash
+21     TC-21    Rekomendasi    PASS     Profil valid — Wanita, Cutting, Sedentary
+22     TC-22    Rekomendasi    PASS     Profil valid — Pria, Maintain, Sedentary
+23     TC-23    Rekomendasi    PASS     Profil valid — Pria, Bulking, Active
+24     TC-24    Rekomendasi    PASS     Profil valid — Wanita, Maintain, Moderate
+25     TC-25    Rekomendasi    PASS     Profil valid — Pria, Cutting, Moderate
+26     TC-26    Rekomendasi    PASS     Response memiliki field wajib (status, user_info, hasil_generasi, menu)
+27     TC-27    Rekomendasi    PASS     user_info memiliki target kalori/protein/karbo/lemak
+28     TC-28    Rekomendasi    PASS     Setiap item menu punya field nutrisi lengkap
+29     TC-29    Rekomendasi    PASS     Total kalori (1970 kkal) <= target+5% (2070 kkal)
+30     TC-30    Rekomendasi    PASS     Menu bebas junk food/gorengan
+31     TC-31    Rekomendasi    PASS     Request tanpa body ditolak (422)
+32     TC-32    Rekomendasi    PASS     Tanpa field 'berat' ditolak (422)
+33     TC-33    Rekomendasi    PASS     Berat = string ('abc') ditolak (422)
+34     TC-34    Rekomendasi    PASS     Umur = string ('dua puluh') ditolak (422)
+35     TC-35    Rekomendasi    PASS     Berat rendah (20 kg) tidak crash
+36     TC-36    Rekomendasi    PASS     Berat tinggi (200 kg) tidak crash
+37     TC-37    Rekomendasi    PASS     Umur sangat muda (10) tidak crash
+38     TC-38    Rekomendasi    PASS     Umur sangat tua (80) tidak crash
+39     TC-39    Rekomendasi    PASS     Berat = 0 tidak crash server
+40     TC-40    Rekomendasi    PASS     Berat negatif (-50) tidak crash server
+41     TC-41    Rekomendasi    PASS     Rekomendasi dengan preferred_foods berhasil
+42     TC-42    Rekomendasi    PASS     Excluded food tidak muncul di menu
+43     TC-43    Rekomendasi    PASS     preferred_foods=[] dan excluded_foods=[] tetap berhasil
+44     TC-44    404            PASS     GET endpoint tidak ada → 404
+45     TC-45    404            PASS     POST endpoint tidak ada → 404/405
+46     TC-46    404            PASS     POST ke GET-only endpoint (/) → 405 Method Not Allowed
+47     TC-47    Performance    PASS     GET / response time = 1.1ms (limit: 500ms)
+48     TC-48    Performance    PASS     GET /search response time = 3482.5ms (limit: 5s)
+49     TC-49    Performance    PASS     POST /rekomendasi response time = 104.4ms (limit: 10s)
+
+======================================================================
+  [END OF REPORT]

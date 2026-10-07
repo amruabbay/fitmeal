@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitMeal App UI Mockup & Wireframe Preview</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fitPrimary: '#10B981', // Emerald Green
+            fitSecondary: '#0EA5E9', // Sky Blue
+            fitBg: '#F8FAFC', // Slate 50
+            fitCard: '#FFFFFF',
+            fitBorder: '#E2E8F0',
+            fitTitle: '#0F172A',
+            fitBody: '#334155',
+            fitSub: '#64748B',
+            proteinCol: '#3B82F6',
+            carbsCol: '#10B981',
+            fatCol: '#F59E0B',
+            breakfastCol: '#0EA5E9',
+            lunchCol: '#10B981',
+            dinnerCol: '#3B82F6',
+            snackCol: '#F59E0B',
+          },
+          fontFamily: {
+            jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+    h1, h2, h3, h4, .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .fit-shadow { box-shadow: 0 4px 20px -2px rgba(16, 185, 129, 0.08); }
+    .card-shadow { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03); }
+  </style>
+</head>
+<body class="p-6 text-slate-800">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- App Header Banner -->
+    <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-200">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-fitPrimary text-white flex items-center justify-center font-jakarta font-extrabold text-xl shadow-md shadow-emerald-200">🥗</div>
+        <div>
+          <h1 class="text-2xl font-extrabold text-fitTitle tracking-tight">FitMeal App UI Mockup</h1>
+          <p class="text-xs text-fitSub font-medium">Visual UI Presisi Tinggi Berdasarkan Kode Aplikasi Asli FitMeal</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="px-3 py-1.5 bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold rounded-full flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-fitPrimary animate-pulse"></span> App Replica Preview
+        </span>
+      </div>
+    </div>
+
+    <!-- Grid Layout of 4 App Screens -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- SCREEN 1: REAL FITMEAL DASHBOARD -->
+      <div class="bg-white rounded-2xl border border-fitBorder card-shadow overflow-hidden">
+        <!-- Status Bar Simulator -->
+        <div class="bg-slate-900 text-white px-5 py-2 text-[11px] font-bold flex justify-between items-center">
+          <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> FitMeal App • Dashboard</span>
+          <span class="text-slate-400 font-mono">09:41 AM</span>
+        </div>
+
+        <div class="p-5 space-y-5 bg-slate-50/60">
+
+          <!-- User Top Bar -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 p-0.5 shadow-sm">
+                <div class="w-full h-full rounded-full bg-white flex items-center justify-center font-jakarta font-bold text-slate-700 text-sm">BS</div>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-fitTitle">Selamat Pagi, Budi 👋</h3>
+                <p class="text-xs text-fitSub">Rabu, 29 Juli 2026</p>
+              </div>
+            </div>
+            <div class="w-9 h-9 rounded-xl bg-white border border-fitBorder flex items-center justify-center text-slate-600 shadow-sm cursor-pointer hover:bg-slate-50">🔔</div>
+          </div>
+
+          <!-- Hero Calorie Ring Card -->
+          <div class="p-5 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl text-white shadow-lg shadow-emerald-600/20 relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+            
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <span class="px-2.5 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold rounded-full uppercase tracking-wider">Target Kalori</span>
+                <div class="mt-2">
+                  <span class="text-3xl font-extrabold font-jakarta">1.470</span>
+                  <span class="text-emerald-100 text-xs font-semibold">/ 2.000 kcal</span>
+                </div>
+              </div>
+              <div class="w-16 h-16 rounded-full border-4 border-emerald-400/40 border-t-white flex items-center justify-center font-bold text-xs bg-white/10 backdrop-blur-sm">
+                73.5%
+              </div>
+            </div>
+
+            <!-- Macro Progress Bars inside Card -->
+            <div class="grid grid-cols-3 gap-2 pt-3 border-t border-white/15 text-xs">
+              <div class="bg-white/10 backdrop-blur-sm p-2 rounded-xl">
+                <span class="text-[10px] text-emerald-100 block">Protein</span>
+                <span class="font-bold">85g</span> <span class="text-[9px] opacity-75">/120g</span>
+                <div class="h-1 bg-white/20 rounded-full mt-1.5 overflow-hidden"><div class="h-full bg-blue-300 w-[70%]"></div></div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm p-2 rounded-xl">
+                <span class="text-[10px] text-emerald-100 block">Karbo</span>
+                <span class="font-bold">150g</span> <span class="text-[9px] opacity-75">/250g</span>
+                <div class="h-1 bg-white/20 rounded-full mt-1.5 overflow-hidden"><div class="h-full bg-emerald-300 w-[60%]"></div></div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm p-2 rounded-xl">
+                <span class="text-[10px] text-emerald-100 block">Lemak</span>
+                <span class="font-bold">40g</span> <span class="text-[9px] opacity-75">/65g</span>
+                <div class="h-1 bg-white/20 rounded-full mt-1.5 overflow-hidden"><div class="h-full bg-amber-300 w-[61%]"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Water Tracker Card (Real Widget Style) -->
+          <div class="p-4 bg-white rounded-2xl border border-fitBorder card-shadow space-y-3">
+            <div class="flex justify-between items-center text-xs">
+              <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm font-bold">💧</div>
+                <span class="font-bold text-fitTitle font-jakarta">Hidrasi Air Harian</span>
+              </div>
+              <span class="font-bold text-sky-600 bg-sky-50 px-2.5 py-1 rounded-full text-[11px]">1.250 / 2.000 ml</span>
+            </div>
+
+            <p class="text-[10px] text-fitSub">💡 Ketuk gelas terisi terakhir untuk membatalkan (Undo).</p>
+
+            <div class="flex gap-2">
+              <div class="w-8 h-10 rounded-xl bg-sky-500 text-white flex items-center justify-center text-sm shadow-sm shadow-sky-200">💧</div>
+              <div class="w-8 h-10 rounded-xl bg-sky-500 text-white flex items-center justify-center text-sm shadow-sm shadow-sky-200">💧</div>
+              <div class="w-8 h-10 rounded-xl bg-sky-500 text-white flex items-center justify-center text-sm shadow-sm shadow-sky-200">💧</div>
+              <div class="w-8 h-10 rounded-xl bg-sky-500 text-white flex items-center justify-center text-sm shadow-sm shadow-sky-200">💧</div>
+              <div class="w-8 h-10 rounded-xl bg-sky-500 text-white ring-2 ring-sky-700 flex items-center justify-center text-sm shadow-sm">💧</div>
+              <div class="w-8 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-sm text-slate-300">💧</div>
+              <div class="w-8 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-sm text-slate-300">💧</div>
+              <div class="w-8 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-sm text-slate-300">💧</div>
+            </div>
+          </div>
+
+          <!-- Food Log Section Header -->
+          <div class="flex justify-between items-center pt-1">
+            <h4 class="font-bold text-fitTitle text-sm font-jakarta">Catatan Makan Hari Ini</h4>
+            <button class="px-3 py-1.5 bg-fitPrimary text-white rounded-xl text-xs font-bold flex items-center gap-1 shadow-md shadow-emerald-200 hover:bg-emerald-600">
+              <span>+</span> Tambah
+            </button>
+          </div>
+
+          <!-- Meal Section Cards -->
+          <div class="space-y-2 text-xs">
+            <div class="p-3.5 bg-white rounded-xl border border-fitBorder flex justify-between items-center card-shadow">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold">🌅</div>
+                <div>
+                  <p class="font-bold text-fitTitle font-jakarta">Makan Pagi (Breakfast)</p>
+                  <p class="text-[11px] text-fitSub">Dada Ayam Grill + Nasi Merah</p>
+                </div>
+              </div>
+              <span class="font-bold text-sky-600 bg-sky-50 px-2 py-1 rounded-lg">350 kcal</span>
+            </div>
+
+            <div class="p-3.5 bg-white rounded-xl border border-fitBorder flex justify-between items-center card-shadow">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">☀️</div>
+                <div>
+                  <p class="font-bold text-fitTitle font-jakarta">Makan Siang (Lunch)</p>
+                  <p class="text-[11px] text-fitSub">Salad Salmon + Sup Sayur</p>
+                </div>
+              </div>
+              <span class="font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-lg">620 kcal</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SCREEN 2: REAL FITMEAL RECOMMENDATION & FILTER STATUS CARD -->
+      <div class="bg-white rounded-2xl border border-fitBorder card-shadow overflow-hidden">
+        <div class="bg-slate-900 text-white px-5 py-2 text-[11px] font-bold flex justify-between items-center">
+          <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> FitMeal App • Rekomendasi Menu</span>
+          <span class="text-slate-400 font-mono">09:42 AM</span>
+        </div>
+
+        <div class="p-5 space-y-4 bg-slate-50/60">
+
+          <!-- CONSTRAINT-BASED FILTER STATUS CARD -->
+          <div class="p-4 bg-white rounded-2xl border-1.5 border-emerald-300 card-shadow relative overflow-hidden">
+            <div class="flex items-start gap-3">
+              <!-- Pulsing Dot Icon -->
+              <div class="w-3 h-3 rounded-full bg-emerald-500 mt-1 shadow-sm shadow-emerald-400 animate-pulse"></div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2">
+                  <h4 class="font-bold text-fitTitle font-jakarta text-xs">Constraint-Based Filtering Aktif</h4>
+                  <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-md">99%+ Akurat</span>
+                </div>
+                <!-- Copywriting aligned with the implemented method -->
+                <p class="text-[11px] text-fitSub mt-0.5 leading-snug">
+                  Kombinasi menu harian terbaik berhasil diselaraskan dengan target nutrisimu.
+                </p>
+              </div>
+              <span class="text-emerald-600 font-bold text-sm">›</span>
+            </div>
+          </div>
+
+          <!-- Bottom Sheet Modal Preview: Filtering Details -->
+          <div class="p-4 bg-white rounded-2xl border border-slate-200 card-shadow space-y-3">
+            <div class="flex items-center justify-between border-b pb-2">
+              <div class="flex items-center gap-2">
+                <span class="p-1.5 bg-emerald-100 rounded-lg text-emerald-700 font-bold text-xs">✨</span>
+                <div>
+                  <h5 class="font-bold text-fitTitle font-jakarta text-xs">Rincian Penyaringan Menu</h5>
+                  <p class="text-[10px] text-fitSub">Diproses menggunakan aturan batasan yang eksplisit</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats Meta Rows -->
+            <div class="space-y-2 bg-slate-50 p-3 rounded-xl border border-slate-200 text-[11px]">
+              <div class="flex justify-between">
+                <span class="text-slate-500 font-medium">Algoritma</span>
+                <span class="font-bold text-slate-800">Constraint-Based Filtering</span>
+              </div>
+              <div class="flex justify-between border-t border-slate-200 pt-1.5">
+                <span class="text-slate-500 font-medium">Siklus Evaluasi</span>
+                <span class="font-bold text-slate-800">5 Siklus</span>
+              </div>
+              <div class="flex justify-between border-t border-slate-200 pt-1.5">
+                <span class="text-slate-500 font-medium">Variasi Menu Teruji</span>
+                <span class="font-bold text-slate-800">1.500 Variasi</span>
+              </div>
+            </div>
+
+            <!-- Edu Card -->
+            <div class="p-3 bg-emerald-50/70 border border-emerald-200 rounded-xl text-[11px] text-emerald-900 leading-snug flex gap-2">
+              <span class="text-emerald-600 font-bold">ℹ️</span>
+              <span>Sistem menyaring kandidat menggunakan aturan eksplisit untuk kategori makanan, preferensi pengguna, dan batas energi harian.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+                <span>☀️</span> Makan Siang
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SCREEN 3: REAL FITMEAL SETTINGS -->
+      <div class="bg-white rounded-2xl border border-fitBorder card-shadow overflow-hidden">
+        <div class="bg-slate-900 text-white px-5 py-2 text-[11px] font-bold flex justify-between items-center">
+          <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> FitMeal App • Pengaturan Profil</span>
+          <span class="text-slate-400 font-mono">09:43 AM</span>
+        </div>
+
+        <div class="p-5 space-y-4 bg-slate-50/60 text-xs">
+
+          <!-- Profile Card -->
+          <div class="p-4 bg-white rounded-2xl border border-fitBorder flex items-center gap-4 card-shadow">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 p-0.5 shadow-md">
+              <div class="w-full h-full rounded-full bg-white flex items-center justify-center font-jakarta font-extrabold text-slate-800 text-lg">BS</div>
+            </div>
+            <div>
+              <h4 class="font-bold text-fitTitle text-sm font-jakarta">Budi Santoso</h4>
+              <p class="text-[11px] text-fitSub">budi.santoso@email.com</p>
+              <span class="inline-block mt-1 px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-md">Mode Edit Aktif</span>
+            </div>
+          </div>
+
+          <!-- Form Fields -->
+          <div class="space-y-3 bg-white p-4 rounded-2xl border border-fitBorder card-shadow">
+            <div>
+              <label class="font-bold text-fitTitle block mb-1">Nama Lengkap</label>
+              <input type="text" value="Budi Santoso" class="w-full p-2.5 bg-slate-50 border border-fitBorder rounded-xl font-bold text-fitTitle focus:ring-2 focus:ring-fitPrimary">
+            </div>
+
+            <div class="grid grid-cols-3 gap-2">
+              <div>
+                <label class="font-bold text-fitTitle block mb-1">Berat (kg)</label>
+                <input type="text" value="70" class="w-full p-2.5 bg-slate-50 border border-fitBorder rounded-xl font-bold text-fitTitle">
+              </div>
+              <div>
+                <label class="font-bold text-fitTitle block mb-1">Tinggi (cm)</label>
+                <input type="text" value="175" class="w-full p-2.5 bg-slate-50 border border-fitBorder rounded-xl font-bold text-fitTitle">
+              </div>
+              <div>
+                <label class="font-bold text-fitTitle block mb-1">Usia (th)</label>
+                <input type="text" value="28" class="w-full p-2.5 bg-slate-50 border border-fitBorder rounded-xl font-bold text-fitTitle">
+              </div>
+            </div>
+          </div>
+
+          <!-- Defensive Button State Demo -->
+          <div class="p-4 bg-white rounded-2xl border border-fitBorder card-shadow space-y-3">
+            <h5 class="font-bold text-fitTitle font-jakarta">Validasi State Tombol Simpan:</h5>
+
+            <div>
+              <p class="text-[11px] text-fitSub mb-1">1. Default State (Data belum ada yang diubah):</p>
+              <button disabled class="w-full py-3 bg-slate-200 text-slate-400 font-bold rounded-xl cursor-not-allowed border border-slate-300">
+                Simpan Perubahan (Disabled)
+              </button>
+            </div>
+
+            <div>
+              <p class="text-[11px] text-fitSub mb-1">2. Enabled State (Aktif otomatis saat data diubah):</p>
+              <button class="w-full py-3 bg-fitPrimary text-white font-bold rounded-xl shadow-md shadow-emerald-200 hover:bg-emerald-600">
+                Simpan Perubahan (Enabled)
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SCREEN 4: REAL FITMEAL BOTTOM NAVIGATION BAR DUAL-CODING -->
+      <div class="bg-white rounded-2xl border border-fitBorder card-shadow overflow-hidden">
+        <div class="bg-slate-900 text-white px-5 py-2 text-[11px] font-bold flex justify-between items-center">
+          <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> FitMeal App • Aksesibilitas Navigation Bar</span>
+          <span class="text-slate-400 font-mono">09:44 AM</span>
+        </div>
+
+        <div class="p-5 space-y-5 bg-slate-50/60 text-xs">
+
+          <div>
+            <h4 class="font-bold text-fitTitle text-sm font-jakarta mb-1">Dual-Coding Active/Inactive Tab State</h4>
+            <p class="text-fitSub text-[11px] mb-3">Sesuai standar WCAG AAA: Tab aktif memadukan **Ikon Solid Emerald + Label Tebal**, sedangkan tab non-aktif menggunakan **Ikon Outline + Label Muted**.</p>
+
+            <!-- Replica Bottom Navigation Bar -->
+            <div class="bg-white border border-fitBorder rounded-2xl p-4 flex justify-around items-center card-shadow">
+              
+              <!-- Tab 1: Beranda Active -->
+              <div class="flex flex-col items-center gap-1 cursor-pointer">
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-fitPrimary flex items-center justify-center text-lg shadow-sm">
+                  🏠
+                </div>
+                <span class="font-extrabold text-fitPrimary text-[11px] font-jakarta">Beranda</span>
+              </div>
+
+              <!-- Tab 2: Stats Inactive -->
+              <div class="flex flex-col items-center gap-1 opacity-60 hover:opacity-100 cursor-pointer">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-500 flex items-center justify-center text-lg">
+                  📊
+                </div>
+                <span class="font-semibold text-slate-500 text-[11px]">Stats</span>
+              </div>
+
+              <!-- Tab 3: Rekomendasi Inactive -->
+              <div class="flex flex-col items-center gap-1 opacity-60 hover:opacity-100 cursor-pointer">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-500 flex items-center justify-center text-lg">
+                  ✨
+                </div>
+                <span class="font-semibold text-slate-500 text-[11px]">Rekomendasi</span>
+              </div>
+
+              <!-- Tab 4: Cari Inactive -->
+              <div class="flex flex-col items-center gap-1 opacity-60 hover:opacity-100 cursor-pointer">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-500 flex items-center justify-center text-lg">
+                  🔍
+                </div>
+                <span class="font-semibold text-slate-500 text-[11px]">Cari</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Color Contrast Verification -->
+          <div class="p-4 bg-white rounded-2xl border border-fitBorder card-shadow space-y-2">
+            <h5 class="font-bold text-fitTitle font-jakarta">Uji Kontras Warna Pill Tags Nutrisi:</h5>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="px-3 py-1 bg-emerald-100 text-emerald-900 border border-emerald-300 font-extrabold text-xs rounded-xl">
+                Protein Tinggi (Lulus WCAG AAA)
+              </span>
+              <span class="px-3 py-1 bg-blue-100 text-blue-900 border border-blue-300 font-extrabold text-xs rounded-xl">
+                Rendah Lemak (Tinggi Kontras)
+              </span>
+              <span class="px-3 py-1 bg-slate-100 text-slate-400 font-medium text-xs rounded-xl">
+                Tag Pudar (Hindari)
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

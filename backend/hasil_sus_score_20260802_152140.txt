@@ -1,0 +1,33 @@
+======================================================================
+  LAPORAN HASIL SUS (SYSTEM USABILITY SCALE)
+  Sistem Rekomendasi Menu Diet Fit Meal
+======================================================================
+
+  Waktu Pengujian    : 2026-08-02 15:21:40
+  Jumlah Responden   : 5
+
+  No    Nama                       SUS Score   Grade Keterangan
+  -----------------------------------------------------------------
+  1     Responden 1                    87.5       A Excellent
+  2     Responden 2                    90.0      A+ Best Imaginable
+  3     Responden 3                    82.5       A Excellent
+  4     Responden 4                    90.0      A+ Best Imaginable
+  5     Responden 5                   100.0      A+ Best Imaginable
+
+  -----------------------------------------------------------------
+        RATA-RATA                      90.0      A+ Best Imaginable
+
+  Benchmark global SUS: 68.0
+  Status: DI ATAS rata-rata global
+
+  Interpretasi Skor SUS:
+  90-100 = A+ (Best Imaginable)
+  80-89  = A  (Excellent)
+  70-79  = B  (Good)
+  60-69  = C  (OK/Acceptable)
+  50-59  = D  (Marginal)
+  <50    = F  (Not Acceptable)
+
+  Referensi: Brooke, J. (1996). SUS - A Quick and Dirty Usability Scale.
+
+  [END OF REPORT]

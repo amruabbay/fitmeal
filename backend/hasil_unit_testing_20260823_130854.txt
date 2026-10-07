@@ -1,0 +1,58 @@
+======================================================================
+  LAPORAN HASIL UNIT / WHITEBOX TESTING — SISTEM FIT MEAL
+======================================================================
+
+  Waktu      : 2026-08-23 13:08:54
+  Total Test : 40
+  Pass       : 40
+  Fail       : 0
+  Pass Rate  : 100.0%
+
+======================================================================
+  DETAIL TEST CASE
+======================================================================
+
+No    ID       Status   Deskripsi
+----------------------------------------------------------------------
+1     UT-01    PASS     Kalori target tetap 2000
+2     UT-02    PASS     Protein target tetap 140g
+3     UT-03    PASS     Rekalkulasi macro ≈ 2000 kkal (diff=0.0)
+4     UT-04    PASS     Karbo > 0
+5     UT-05    PASS     Lemak > 0
+6     UT-06    PASS     Kalori 0 → semua macro = 0
+7     UT-07    PASS     Protein > kalori → karbo & lemak ≥ 0 (tidak negatif)
+8     UT-08    PASS     Menghasilkan tiga waktu makan
+9     UT-09    PASS     Total energi tidak melampaui target
+10    UT-10    PASS     Item menu tidak berulang
+11    UT-11    PASS     Aturan menghasilkan keluaran deterministik
+12    UT-12    PASS     TDEE Pria Sedentary = 1971 kkal
+13    UT-13    PASS     Protein = 2× berat badan (140g)
+14    UT-14    PASS     Cutting: max(TDEE - 500, BMR)
+15    UT-15    PASS     Bulking: TDEE + 400 kkal
+16    UT-16    PASS     Wanita TDEE < Pria TDEE (input sama)
+17    UT-17    PASS     Active > Moderate > Sedentary (TDEE ordering)
+18    UT-18    PASS     Dataset memiliki 5 kategori (Karbo, Hewani, Nabati, Sayur, Buah)
+19    UT-19    PASS     Setiap kategori memiliki ≥ 1 item
+20    UT-20    PASS     Penyaringan menghasilkan ≥ 1 item
+21    UT-21    PASS     Tidak ada duplikat ID dalam satu piring
+22    UT-22    PASS     Semua item piring punya field nutrisi lengkap
+23    UT-23    PASS     Tidak ada item dengan kalori > 600 (whitelist filter)
+24    UT-24    PASS     Metadata algoritma hanya Constraint-Based Filtering
+25    UT-25    PASS     Hard constraint UPF tercatat aktif
+26    UT-26    PASS     Total menu tidak melebihi batas energi harian
+27    UT-27    PASS     Algoritma menghasilkan menu (bukan [])
+28    UT-28    PASS     Menu: Pagi, Siang, Malam
+29    UT-29    PASS     Stats memiliki field 'accuracy_pct'
+30    UT-30    PASS     Akurasi kalori = 94.0% (harus > 80%)
+31    UT-31    PASS     Excluded food 'nasi putih (1 centong)' tidak muncul di menu
+32    UT-32    PASS     Exact match skor > partial match
+33    UT-33    PASS     'nasi goreng' skor > 'bungkus nasi goreng' untuk query 'nasi'
+34    UT-34    PASS     is_junk_food('Indomie Goreng') = True
+35    UT-35    PASS     is_junk_food('Nasi Putih') = False
+36    UT-36    PASS     Semua junk food sample terdeteksi
+37    UT-37    PASS     Parsing normal → kalori = 165.0
+38    UT-38    PASS     Parsing normal → protein = 31.0
+39    UT-39    PASS     String kosong → semua nutrisi = 0
+40    UT-40    PASS     String random → tidak crash, return dict
+
+  [END OF REPORT]

@@ -1,0 +1,50 @@
+======================================================================
+  LAPORAN DATABASE INTEGRITY TESTING — SISTEM FIT MEAL
+======================================================================
+
+  Waktu      : 2026-08-02 15:21:11
+  Database   : skripsi_diet.db
+  Total Test : 25
+  Pass       : 22
+  Fail       : 3
+  Pass Rate  : 88.0%
+
+======================================================================
+  DETAIL
+======================================================================
+
+No    ID           Status   Deskripsi
+----------------------------------------------------------------------
+1     DB-01        PASS     Tabel 'food_cache' ada di database
+2     DB-02        PASS     Semua field wajib ada (fatsecret_id, nama_makanan, kalori, dll)
+3     DB-03        PASS     Database memiliki data (total: 1232 rows)
+4     DB-04        PASS     Tidak ada nama_makanan NULL
+5     DB-05        PASS     Tidak ada nama_makanan kosong ('')
+6     DB-06        PASS     Tidak ada kalori NULL
+7     DB-07        PASS     Tidak ada kategori NULL
+8     DB-08        PASS     Tidak ada fatsecret_id duplikat
+9     DB-09        FAIL     Tidak ada duplikat nama_makanan+kategori
+                   → Expected: 0 duplikat
+                   → Actual  : 1 duplikat
+10    DB-10        PASS     Tidak ada kalori negatif
+11    DB-11        PASS     Tidak ada protein negatif
+12    DB-12        PASS     Tidak ada karbo negatif
+13    DB-13        PASS     Tidak ada lemak negatif
+14    DB-14        PASS     Tidak ada kalori absurd (> 2000 kkal per item)
+15    DB-15        FAIL     Tidak ada item dengan semua nutrisi = 0
+                   → Expected: 0 items
+                   → Actual  : 4 items
+16    DB-16        PASS     Rata-rata kalori dalam range wajar (169.5 kkal)
+17    DB-17        FAIL     Semua kategori di DB adalah valid
+                   → Expected: {'Hewani', 'Karbo', 'Buah', 'Sayur', 'Nabati'}
+                   → Actual  : {'Hewani', 'Karbo', 'Lainnya', 'Buah', 'Sayur', 'Nabati'}
+18    DB-18-HEW    PASS     Kategori 'Hewani' memiliki data (390 items)
+19    DB-18-KAR    PASS     Kategori 'Karbo' memiliki data (278 items)
+20    DB-18-BUA    PASS     Kategori 'Buah' memiliki data (116 items)
+21    DB-18-SAY    PASS     Kategori 'Sayur' memiliki data (214 items)
+22    DB-18-NAB    PASS     Kategori 'Nabati' memiliki data (123 items)
+23    DB-19        PASS     Semua fatsecret_id > 0
+24    DB-20        PASS     Panjang nama_makanan antara 3-200 karakter
+25    DB-21        PASS     Ukuran database wajar (0.33 MB, limit 50MB)
+
+  [END OF REPORT]
